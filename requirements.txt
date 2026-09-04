@@ -1,0 +1,14 @@
+numpy==2.3.5
+scipy==1.17.1
+matplotlib==3.10.8
+arm-pyart==2.2.2
+pydda==2.4.1
+cinrad==1.9.3
+cartopy==0.25.0
+pyvista==0.48.4
+xarray==2026.4.0
+netCDF4==1.7.4
+requests==2.32.5
+pyshp==3.0.9
+shapely==2.1.2
+pyproj==3.7.2

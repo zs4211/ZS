@@ -1,0 +1,29 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editors and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw radar/GIS data and generated retrieval products
+data/
+output/
+verification_filter5/
+verification_full/
+basemap_temp.png
+
+# Rendered document QA output (source document and figures remain tracked)
+artifacts/**/render_*/
