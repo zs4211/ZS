@@ -1,0 +1,16 @@
+{
+  "adjoint": {
+    "seeds": 20,
+    "worst_relative_error": 1.5279646867189668e-15,
+    "mean_relative_error": 5.683155917323795e-16,
+    "acceptance_limit": 1e-07
+  },
+  "analytic_max_abs_error_s-1": {
+    "uniform_horizontal": 0.0,
+    "nondivergent_horizontal": 0.0,
+    "vertical_constant_mass_flux": 0.0,
+    "vertical_linear_mass_flux": 0.0,
+    "metre_vs_kilometre_coordinates": 0.0,
+    "one_sided_boundary_linear_field": 0.0
+  }
+}

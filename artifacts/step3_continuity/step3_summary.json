@@ -1,0 +1,116 @@
+{
+  "case": {
+    "baseline": "output\\wind3d_20260511070939Z_20260511070929Z.nc",
+    "grid_shape": [
+      20,
+      201,
+      201
+    ],
+    "coordinate_unit": "m",
+    "wind_unit": "m s-1",
+    "residual_unit": "s-1"
+  },
+  "operator": {
+    "definition": "Dx(u)+Dy(v)+rho0^-1 Dz(rho0*w)",
+    "interior_difference": "centred two-point secant",
+    "domain_edges": "first-order one-sided; no hard w boundary value",
+    "rho0": "dimensionless exponential reference profile",
+    "rho0_scale_height_m": 10000.0,
+    "physics_mask": "finite/base-valid complete x,y,z derivative stencils"
+  },
+  "counts": {
+    "domain": 808020,
+    "dual_mask": 6928,
+    "finite_wind": 4645,
+    "physics_valid": 2371,
+    "finite_but_stencil_undefined": 2274,
+    "physics_valid_fraction_of_finite_wind": 0.5104413347685683
+  },
+  "residual_statistics": {
+    "new_Drho_physics_valid": {
+      "count": 2371,
+      "mean": 9.626771895792997e-05,
+      "rms": 0.000463093878644323,
+      "abs_median": 0.0003090709411064423,
+      "abs_p95": 0.0009527362722087148,
+      "abs_p99": 0.0011782601490414268,
+      "abs_max": 0.00174675862760384
+    },
+    "old_stored_all_finite_wind": {
+      "count": 4645,
+      "mean": 6.581721281130202e-05,
+      "rms": 0.0005575777904219448,
+      "abs_median": 0.00034918703022412956,
+      "abs_p95": 0.0011041287332773213,
+      "abs_p99": 0.0016644379589706706,
+      "abs_max": 0.002457068767398596
+    },
+    "old_stored_on_common_physics_mask": {
+      "count": 2371,
+      "mean": 9.680453707394207e-05,
+      "rms": 0.00046264579839798046,
+      "abs_median": 0.00030889801564626396,
+      "abs_p95": 0.0009471294761169702,
+      "abs_p99": 0.0011794234509579853,
+      "abs_max": 0.0017769442638382316
+    },
+    "new_minus_old_on_common_physics_mask": {
+      "count": 2371,
+      "mean": -5.368181160121142e-07,
+      "rms": 1.2112581377436582e-05,
+      "abs_median": 2.6320371195466107e-06,
+      "abs_p95": 1.768427291401005e-05,
+      "abs_p99": 6.536612313581879e-05,
+      "abs_max": 0.00012203915788049102
+    },
+    "old_stored_on_mask_boundary": {
+      "count": 2274,
+      "mean": 3.350808975645614e-05,
+      "rms": 0.0006417757970734451,
+      "abs_median": 0.0004031020507682115,
+      "abs_p95": 0.0012926274503115565,
+      "abs_p99": 0.0018625754700042306,
+      "abs_max": 0.002457068767398596
+    },
+    "zero_vs_median_fill_sensitivity_on_mask_boundary": {
+      "count": 2274,
+      "mean": 2.3571387154993515e-06,
+      "rms": 0.004057532565220624,
+      "abs_median": 0.002085114837099595,
+      "abs_p95": 0.007772358576456706,
+      "abs_p99": 0.007792359074363592,
+      "abs_max": 0.007792359074363594
+    }
+  },
+  "difference_attribution": {
+    "old_recompute_minus_stored_on_finite": {
+      "count": 4645,
+      "mean": -2.1016086513078656e-05,
+      "rms": 0.002773153108259087,
+      "abs_median": 2.7930792205997645e-10,
+      "abs_p95": 0.006961573978546878,
+      "abs_p99": 0.00988563160468857,
+      "abs_max": 0.011813397116956954
+    },
+    "new_flux_minus_expanded_density_on_common": {
+      "count": 2371,
+      "mean": -5.368181582969833e-07,
+      "rms": 1.2112581365391327e-05,
+      "abs_median": 2.632228325289798e-06,
+      "abs_p95": 1.7684226476473414e-05,
+      "abs_p99": 6.536608670055285e-05,
+      "abs_max": 0.00012203907924046922
+    },
+    "new_difference_scheme_minus_numpy_gradient_on_common": {
+      "count": 2371,
+      "mean": -3.343833144791333e-22,
+      "rms": 8.981803644291001e-20,
+      "abs_median": 0.0,
+      "abs_p95": 2.168404344971009e-19,
+      "abs_p99": 4.336808689942018e-19,
+      "abs_max": 5.421010862427522e-19
+    },
+    "new_old_correlation_on_common": 0.9996435387580848,
+    "interpretation": "On complete interior stencils the horizontal/vertical secants match numpy.gradient for this uniform grid. Remaining common-cell differences are the flux-form density discretisation. Finite centres without complete stencils are undefined by the new physics mask; the legacy value there depends on invalid/hidden neighbour values. Recomputing from the exported winds cannot exactly reproduce those boundary values because output masking discarded some neighbour values used by the in-memory legacy gradient."
+  }
+}
