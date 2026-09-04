@@ -1,0 +1,14 @@
+{
+  "translation_adjoint": {
+    "seeds": 20,
+    "worst_relative_error": 1.3291305917196498e-15,
+    "mean_relative_error": 4.105421340646863e-16,
+    "acceptance_limit": 1e-07
+  },
+  "time_operator_adjoint": {
+    "seeds": 20,
+    "worst_relative_error": 1.2823673097122466e-13,
+    "mean_relative_error": 8.250587360369316e-15,
+    "acceptance_limit": 1e-07
+  }
+}
