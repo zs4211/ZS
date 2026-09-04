@@ -1,0 +1,103 @@
+{
+  "case": {
+    "station1": "Z9539",
+    "station2": "Z9532",
+    "timestamp1": "20260511070939Z",
+    "timestamp2": "20260511070929Z",
+    "baseline_file": "output\\wind3d_20260511070939Z_20260511070929Z.nc",
+    "grid_shape": [
+      20,
+      201,
+      201
+    ],
+    "total_gridpoints": 808020,
+    "bca_threshold_deg": 20.0
+  },
+  "polar_gate_provenance": {
+    "raw_velocity": {
+      "Z9539": {
+        "total_gates": 1656000,
+        "present_gates": 635772,
+        "present_fraction": 0.3839202898550725,
+        "range_qc_pass_gates": 635772,
+        "range_qc_fail_gates": 0
+      },
+      "Z9532": {
+        "total_gates": 1672560,
+        "present_gates": 610170,
+        "present_fraction": 0.36481202468072893,
+        "range_qc_pass_gates": 610170,
+        "range_qc_fail_gates": 0
+      }
+    },
+    "after_unchanged_qc": {
+      "Z9539": {
+        "total_gates": 1656000,
+        "present_gates": 612686,
+        "present_fraction": 0.3699794685990338,
+        "range_qc_pass_gates": 612686,
+        "range_qc_fail_gates": 0
+      },
+      "Z9532": {
+        "total_gates": 1672560,
+        "present_gates": 593259,
+        "present_fraction": 0.3547011766394031,
+        "range_qc_pass_gates": 593259,
+        "range_qc_fail_gates": 0
+      }
+    },
+    "reflectivity": {
+      "Z9539": {
+        "raw_present_gates": 775720,
+        "qc_present_gates": 736465
+      },
+      "Z9532": {
+        "raw_present_gates": 763977,
+        "qc_present_gates": 730865
+      }
+    },
+    "limitation": "PyART grid output does not retain source-gate contributor IDs. Raw/QC gate failures can be counted globally and sampled locally, but a missing grid cell cannot always be uniquely assigned to one gate-level rule."
+  },
+  "grid_coverage": {
+    "radar1_count": 86578,
+    "radar1_fraction": 0.10714833791242791,
+    "radar2_count": 82020,
+    "radar2_fraction": 0.10150738843097944,
+    "dual_before_bca_count": 12234,
+    "dual_before_bca_fraction": 0.015140714338753991,
+    "rejected_by_bca_count": 5306,
+    "rejected_by_bca_fraction_of_dual": 0.43370933464116396,
+    "bca_ge_20_count": 6928,
+    "bca_ge_20_fraction": 0.008574045196901067,
+    "baseline_final_count": 6928,
+    "baseline_final_fraction": 0.008574045196901067,
+    "rejected_downstream_count": 0,
+    "diagnostic_vs_baseline_disagreement_count": 0
+  },
+  "observation_classes": {
+    "dual_good_geometry_bca_ge_20": 6928,
+    "dual_poor_geometry_bca_lt_20": 5306,
+    "single_radar": 144130,
+    "no_observation": 651656
+  },
+  "mask_provenance_counts": {
+    "no_radar": 651656,
+    "radar1_only": 74344,
+    "radar2_only": 69786,
+    "dual_before_bca": 12234,
+    "rejected_by_bca": 5306,
+    "accepted_by_bca": 6928,
+    "rejected_downstream": 0,
+    "final_valid": 6928
+  },
+  "repeated_sweeps": {
+    "Z9539": {
+      "repeated_elevation_groups": 3,
+      "repeated_sweep_records": 6
+    },
+    "Z9532": {
+      "repeated_elevation_groups": 3,
+      "repeated_sweep_records": 6
+    }
+  }
+}

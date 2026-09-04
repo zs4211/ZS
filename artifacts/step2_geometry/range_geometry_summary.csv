@@ -1,0 +1,9 @@
+﻿max_radar_range_bin_km,domain_count,dual_count,dual_fraction_in_range_bin,bca_ge_20_count,bca_ge_20_fraction_of_dual,median_bca_deg,median_horizontal_inverse_condition,median_null_vertical_alignment
+0-75,0,0,nan,0,nan,nan,nan,nan
+75-100,7384,2696,0.36511375947995667,951,0.35274480712166173,14.839594142839674,0.13022868655168884,0.9517427789117938
+100-125,60694,9538,0.15714897683461299,5977,0.626651289578528,27.304059170169037,0.24288689330034335,0.98477308686782
+125-150,102501,0,0.0,0,nan,nan,nan,nan
+150-175,140079,0,0.0,0,nan,nan,nan,nan
+175-200,171203,0,0.0,0,nan,nan,nan,nan
+200-250,271388,0,0.0,0,nan,nan,nan,nan
+>=250,54771,0,0.0,0,nan,nan,nan,nan
