@@ -1,0 +1,423 @@
+{
+  "scope": "Step 5 feasibility only; no Tucker manifold or optimisation",
+  "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+  "input_uniform_baseline_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+  "source_sha256": {
+    "src\\low_rank_diagnostics.py": "b10033430d5ec8dcfbda756b07d58073c5dbd67578343ad96e6b408c7538a164",
+    "tools\\run_step5_uniform_baselines.py": "edaea65dbea1e1af309233235c4c6bafe9236219d8ab3f2b770476067320388c",
+    "tools\\plot_step5_low_rank_results.py": "20a200b7571cee2c0c72d9e2dba41f4b7a1890299693a73d121146a127455c53",
+    "tools\\run_step5_low_rank_diagnostics.py": "7826b945b8e41375b82a55f3cef042f70f869a098bb3781392f15330111daf58"
+  },
+  "uniform_baseline_sha256": {
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511070939Z_20260511070929Z.nc": "39101f37dcdf025319fa14df14ad126e0da51429f4b9916fed9eff79d85239e6",
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511071440Z_20260511071502Z.nc": "ac0ac9f1620a26cf0f4c37117e41a28406b2e9f8ee769edbd3c0e0ae4d46b44d",
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511071941Z_20260511072036Z.nc": "1e0c28e318c98731cfcebdc8cb6ac31d57c807a41d86bfe75cdb2d46ff64b115",
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511072514Z_20260511072609Z.nc": "1cc97b290512283ee7ab07d59da6eb69104ee09795a9f0c5329321d17c713843",
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511073015Z_20260511073142Z.nc": "69e4a242ead5708991cbbc38ecf297a293d3503b0483e6f6e9515effa0493401",
+    "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511073515Z_20260511073715Z.nc": "b4601670f112a64bf6713f1ea963cf4bddd9b40c619dc8c91a92a9a513cf1074"
+  },
+  "n_uniform_baselines": 6,
+  "windows": {
+    "K3": 4,
+    "K4": 3,
+    "K5": 2,
+    "total": 9
+  },
+  "tensor_order": [
+    "x",
+    "y",
+    "z",
+    "time",
+    "component"
+  ],
+  "component_rank_fixed": 3,
+  "rank_rule": {
+    "aggressive_temporal": [
+      "ceil(0.125 nx),min>=2",
+      "ceil(0.125 ny),min>=2",
+      "ceil(0.25 nz),min>=2",
+      1,
+      3
+    ],
+    "compact_temporal": [
+      "ceil(0.25 nx),min>=2",
+      "ceil(0.25 ny),min>=2",
+      "ceil(0.5 nz),min>=2",
+      "min(2,K)",
+      3
+    ],
+    "moderate_temporal": [
+      "ceil(0.5 nx),min>=2",
+      "ceil(0.5 ny),min>=2",
+      "ceil(0.75 nz),min>=2",
+      "min(3,K)",
+      3
+    ],
+    "compact_rt_full": [
+      "same compact spatial",
+      "rt=K",
+      "rc=3"
+    ],
+    "moderate_rt_full": [
+      "same moderate spatial",
+      "rt=K",
+      "rc=3"
+    ]
+  },
+  "missing_domain_method": {
+    "initialisation": "per-component observed mean; global observed mean fallback; never zero spectrum",
+    "iterations": 6,
+    "holdout": "fixed deterministic 10% lattice of available spatial-time cells; all 3 components held out together",
+    "interpretation": "available-sample representation plus holdout diagnostic only; no truly missing wind truth available"
+  },
+  "motion_source": "frozen Step 4 NCC estimates; no retuning",
+  "dense_domains": [
+    {
+      "window": "K3_T1-3",
+      "K": 3,
+      "start_index": 0,
+      "fair_common_count": 1775,
+      "dense_box": {
+        "z": [
+          2,
+          6
+        ],
+        "y": [
+          83,
+          90
+        ],
+        "x": [
+          104,
+          117
+        ]
+      },
+      "dense_box_shape_zyx": [
+        4,
+        7,
+        13
+      ],
+      "dense_box_samples_per_time": 364,
+      "x_range_m": [
+        6000.0,
+        24000.0
+      ],
+      "y_range_m": [
+        -25500.0,
+        -16500.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        4315.78947368421
+      ]
+    },
+    {
+      "window": "K3_T2-4",
+      "K": 3,
+      "start_index": 1,
+      "fair_common_count": 2198,
+      "dense_box": {
+        "z": [
+          2,
+          7
+        ],
+        "y": [
+          81,
+          88
+        ],
+        "x": [
+          100,
+          114
+        ]
+      },
+      "dense_box_shape_zyx": [
+        5,
+        7,
+        14
+      ],
+      "dense_box_samples_per_time": 490,
+      "x_range_m": [
+        0.0,
+        19500.0
+      ],
+      "y_range_m": [
+        -28500.0,
+        -19500.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        5078.9473684210525
+      ]
+    },
+    {
+      "window": "K3_T3-5",
+      "K": 3,
+      "start_index": 2,
+      "fair_common_count": 2625,
+      "dense_box": {
+        "z": [
+          2,
+          6
+        ],
+        "y": [
+          80,
+          87
+        ],
+        "x": [
+          97,
+          117
+        ]
+      },
+      "dense_box_shape_zyx": [
+        4,
+        7,
+        20
+      ],
+      "dense_box_samples_per_time": 560,
+      "x_range_m": [
+        -4500.0,
+        24000.0
+      ],
+      "y_range_m": [
+        -30000.0,
+        -21000.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        4315.78947368421
+      ]
+    },
+    {
+      "window": "K3_T4-6",
+      "K": 3,
+      "start_index": 3,
+      "fair_common_count": 3246,
+      "dense_box": {
+        "z": [
+          1,
+          7
+        ],
+        "y": [
+          78,
+          89
+        ],
+        "x": [
+          102,
+          113
+        ]
+      },
+      "dense_box_shape_zyx": [
+        6,
+        11,
+        11
+      ],
+      "dense_box_samples_per_time": 726,
+      "x_range_m": [
+        3000.0,
+        18000.0
+      ],
+      "y_range_m": [
+        -33000.0,
+        -18000.0
+      ],
+      "z_range_m": [
+        1263.157894736842,
+        5078.9473684210525
+      ]
+    },
+    {
+      "window": "K4_T1-4",
+      "K": 4,
+      "start_index": 0,
+      "fair_common_count": 1348,
+      "dense_box": {
+        "z": [
+          2,
+          7
+        ],
+        "y": [
+          82,
+          89
+        ],
+        "x": [
+          102,
+          112
+        ]
+      },
+      "dense_box_shape_zyx": [
+        5,
+        7,
+        10
+      ],
+      "dense_box_samples_per_time": 350,
+      "x_range_m": [
+        3000.0,
+        16500.0
+      ],
+      "y_range_m": [
+        -27000.0,
+        -18000.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        5078.9473684210525
+      ]
+    },
+    {
+      "window": "K4_T2-5",
+      "K": 4,
+      "start_index": 1,
+      "fair_common_count": 1798,
+      "dense_box": {
+        "z": [
+          2,
+          6
+        ],
+        "y": [
+          81,
+          87
+        ],
+        "x": [
+          97,
+          116
+        ]
+      },
+      "dense_box_shape_zyx": [
+        4,
+        6,
+        19
+      ],
+      "dense_box_samples_per_time": 456,
+      "x_range_m": [
+        -4500.0,
+        22500.0
+      ],
+      "y_range_m": [
+        -28500.0,
+        -21000.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        4315.78947368421
+      ]
+    },
+    {
+      "window": "K4_T3-6",
+      "K": 4,
+      "start_index": 2,
+      "fair_common_count": 2215,
+      "dense_box": {
+        "z": [
+          1,
+          7
+        ],
+        "y": [
+          79,
+          89
+        ],
+        "x": [
+          102,
+          111
+        ]
+      },
+      "dense_box_shape_zyx": [
+        6,
+        10,
+        9
+      ],
+      "dense_box_samples_per_time": 540,
+      "x_range_m": [
+        3000.0,
+        15000.0
+      ],
+      "y_range_m": [
+        -31500.0,
+        -18000.0
+      ],
+      "z_range_m": [
+        1263.157894736842,
+        5078.9473684210525
+      ]
+    },
+    {
+      "window": "K5_T1-5",
+      "K": 5,
+      "start_index": 0,
+      "fair_common_count": 1127,
+      "dense_box": {
+        "z": [
+          3,
+          7
+        ],
+        "y": [
+          81,
+          88
+        ],
+        "x": [
+          101,
+          113
+        ]
+      },
+      "dense_box_shape_zyx": [
+        4,
+        7,
+        12
+      ],
+      "dense_box_samples_per_time": 336,
+      "x_range_m": [
+        1500.0,
+        18000.0
+      ],
+      "y_range_m": [
+        -28500.0,
+        -19500.0
+      ],
+      "z_range_m": [
+        2789.4736842105262,
+        5078.9473684210525
+      ]
+    },
+    {
+      "window": "K5_T2-6",
+      "K": 5,
+      "start_index": 1,
+      "fair_common_count": 1515,
+      "dense_box": {
+        "z": [
+          2,
+          6
+        ],
+        "y": [
+          81,
+          87
+        ],
+        "x": [
+          97,
+          114
+        ]
+      },
+      "dense_box_shape_zyx": [
+        4,
+        6,
+        17
+      ],
+      "dense_box_samples_per_time": 408,
+      "x_range_m": [
+        -4500.0,
+        19500.0
+      ],
+      "y_range_m": [
+        -28500.0,
+        -21000.0
+      ],
+      "z_range_m": [
+        2026.3157894736842,
+        4315.78947368421
+      ]
+    }
+  ],
+  "output_tables": [
+    "mode_spectra.csv",
+    "rank_reconstruction_metrics.csv",
+    "height_rmse.csv"
+  ]
+}

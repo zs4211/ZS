@@ -1,0 +1,124 @@
+{
+  "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+  "frozen_parent_tag": "step4-temporal",
+  "configuration": {
+    "grid_shape": [
+      20,
+      201,
+      201
+    ],
+    "grid_limits_m": [
+      [
+        500.0,
+        15000.0
+      ],
+      [
+        -150000.0,
+        150000.0
+      ],
+      [
+        -150000.0,
+        150000.0
+      ]
+    ],
+    "Co": 100.0,
+    "Cb": 0.01,
+    "Cm": 1000.0,
+    "Cx": 0.0001,
+    "Cy": 0.0001,
+    "Cz": 0.0001,
+    "wind_tol": 0.5,
+    "max_iterations": 150,
+    "filter_window": 15,
+    "filter_order": 3,
+    "min_cross_beam_angle_deg": 20.0,
+    "dual_radar_iterations": 0,
+    "engine": "scipy"
+  },
+  "completed": [
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511070939Z_20260511070929Z.nc",
+      "timestamp1": "20260511070939Z",
+      "timestamp2": "20260511070929Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 86578,
+      "radar2_observation_count": 82020,
+      "dual_observation_count": 12234,
+      "bca_ge_20_count": 6928,
+      "finite_wind_count": 6869,
+      "physics_mask_count": 3834,
+      "radial_velocity_rmse_radar1": 3.6425847053581157,
+      "radial_velocity_rmse_radar2": 3.6717317265927196
+    },
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511071440Z_20260511071502Z.nc",
+      "timestamp1": "20260511071440Z",
+      "timestamp2": "20260511071502Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 87219,
+      "radar2_observation_count": 84524,
+      "dual_observation_count": 12580,
+      "bca_ge_20_count": 7284,
+      "finite_wind_count": 7173,
+      "physics_mask_count": 4265,
+      "radial_velocity_rmse_radar1": 3.5670402923770275,
+      "radial_velocity_rmse_radar2": 3.644722656670241
+    },
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511071941Z_20260511072036Z.nc",
+      "timestamp1": "20260511071941Z",
+      "timestamp2": "20260511072036Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 87745,
+      "radar2_observation_count": 85288,
+      "dual_observation_count": 12861,
+      "bca_ge_20_count": 7619,
+      "finite_wind_count": 7516,
+      "physics_mask_count": 4602,
+      "radial_velocity_rmse_radar1": 3.809664257914337,
+      "radial_velocity_rmse_radar2": 3.4988877077213387
+    },
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511072514Z_20260511072609Z.nc",
+      "timestamp1": "20260511072514Z",
+      "timestamp2": "20260511072609Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 88133,
+      "radar2_observation_count": 87449,
+      "dual_observation_count": 13567,
+      "bca_ge_20_count": 8393,
+      "finite_wind_count": 8262,
+      "physics_mask_count": 5184,
+      "radial_velocity_rmse_radar1": 3.688735748657644,
+      "radial_velocity_rmse_radar2": 3.614233724909075
+    },
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511073015Z_20260511073142Z.nc",
+      "timestamp1": "20260511073015Z",
+      "timestamp2": "20260511073142Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 88903,
+      "radar2_observation_count": 88152,
+      "dual_observation_count": 14519,
+      "bca_ge_20_count": 9290,
+      "finite_wind_count": 9235,
+      "physics_mask_count": 5993,
+      "radial_velocity_rmse_radar1": 3.679251582113294,
+      "radial_velocity_rmse_radar2": 3.8816252026887397
+    },
+    {
+      "file": "artifacts\\step5_low_rank\\uniform_baseline\\wind3d_20260511073515Z_20260511073715Z.nc",
+      "timestamp1": "20260511073515Z",
+      "timestamp2": "20260511073715Z",
+      "code_commit": "3b5cf5d07dabc403d7cd84e8f1f94adfcb0c5eb0",
+      "radar1_observation_count": 89421,
+      "radar2_observation_count": 89779,
+      "dual_observation_count": 15149,
+      "bca_ge_20_count": 9887,
+      "finite_wind_count": 9832,
+      "physics_mask_count": 6620,
+      "radial_velocity_rmse_radar1": 3.7082254559481536,
+      "radial_velocity_rmse_radar2": 4.159756874710992
+    }
+  ]
+}
